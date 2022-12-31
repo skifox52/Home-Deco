@@ -509,13 +509,17 @@ footer .contact__line > p {
 }
 
 /* Gallery page  */
+
 .gallery {
   box-sizing: border-box;
   display: grid;
   gap: 1em;
   grid-template-areas: "asset1 asset2 asset2" "asset3 asset4 asset5" "asset3 asset4 asset6" "asset3 asset7 asset8";
-  height: 1449px;
-  width: 1613px;
+  /* height: 1449px;
+  width: 1613px; */
+  height: 134%;
+  width: 84%;
+  overflow: hidden;
   margin-inline: auto;
   margin-block: 5em;
 }
@@ -529,7 +533,7 @@ footer .contact__line > p {
 }
 .gallery .asset1 {
   width: 593px;
-  height: 380px;
+  aspect-ratio: 1.56;
   grid-area: asset1;
   background-image: url("../public/assets/Gallery/toa-heftiba-FV3GConVSss-unsplash.jpg");
 }
@@ -538,7 +542,7 @@ footer .contact__line > p {
   position: relative;
   right: 3px;
   width: 1005px;
-  height: 561px;
+  aspect-ratio: 1.79;
   background-image: url("../public/assets/Gallery/spacejoy-AAy5l4-oFuw-unsplash.jpg");
 }
 .gallery .asset3 {
@@ -546,13 +550,13 @@ footer .contact__line > p {
   top: -175px;
   grid-area: asset3;
   width: 594px;
-  height: 1049px;
+  aspect-ratio: 0.566;
   background-image: url("../public/assets/Gallery/spacejoy-TKFskJy8PQ8-unsplash.jpg");
 }
 .gallery .asset4 {
   grid-area: asset4;
   width: 437px;
-  height: 585px;
+  aspect-ratio: 0.747;
   background-image: url("../public/assets/Gallery/don-kaveen-NFbwes_e-jI-unsplash.jpg");
 }
 .gallery .asset5 {
@@ -560,7 +564,7 @@ footer .contact__line > p {
   position: relative;
   right: 0px;
   width: 535px;
-  height: 266px;
+  aspect-ratio: 2.01;
   background-image: url("../public/assets/Gallery/jason-wang-NxAwryAbtIw-unsplash.jpg");
 }
 .gallery .asset6 {
@@ -568,7 +572,7 @@ footer .contact__line > p {
   position: relative;
   top: -50px;
   width: 535px;
-  height: 334px;
+  aspect-ratio: 1.6;
   background-image: url("../public/assets/Gallery/roberto-nickson-emqnSQwQQDo-unsplash.jpg");
 }
 .gallery .asset7 {
@@ -576,7 +580,7 @@ footer .contact__line > p {
   top: -128px;
   grid-area: asset7;
   width: 450px;
-  height: 270px;
+  aspect-ratio: 1.67;
   background-image: url("../public/assets/Gallery/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg");
 }
 .gallery .asset8 {
@@ -585,7 +589,7 @@ footer .contact__line > p {
   right: -5px;
   top: -98px;
   width: 530px;
-  height: 240px;
+  aspect-ratio: 2.21;
   background-image: url("../public/assets/Gallery/darren-ahmed-arceo-_5AGnG4Mh5E-unsplash.jpg");
 }
 .asset:hover {
@@ -593,7 +597,7 @@ footer .contact__line > p {
   transform: scale(1.03);
 }
 /* Media queries for responsivness  */
-@media (max-width: 450px) {
+@media (max-width: 1350px) {
   /* Header  */
   header p:first-of-type {
     font-size: 40px;
@@ -627,7 +631,7 @@ footer .contact__line > p {
   }
   .card {
     gap: 1em;
-    width: 100%;
+    max-width: 100%;
     aspect-ratio: 1;
     padding-block: 1em;
   }
@@ -716,7 +720,7 @@ footer .contact__line > p {
   /* Assets */
   .asset {
     width: 100% !important;
-    height: 100% !important;
+    height: 200px !important;
   }
   .asset1 {
     position: static !important;
@@ -749,5 +753,41 @@ footer .contact__line > p {
   .asset8 {
     position: static !important;
     width: 100%;
+  }
+}
+/* MD Screen  */
+@media (max-width: 1650px) {
+  header nav {
+    width: 35%;
+  }
+  header nav > ul > li > a {
+    font-size: 20px;
+  }
+  .gallery {
+    gap: 1;
+  }
+  .gallery .asset1 {
+    width: 490.6px;
+  }
+  .gallery .asset2 {
+    width: 863.7px;
+  }
+  .gallery .asset3 {
+    width: 510.4px;
+  }
+  .gallery .asset4 {
+    width: 375.5px;
+  }
+  .gallery .asset5 {
+    width: 459.76px;
+  }
+  .gallery .asset6 {
+    width: 459.76px;
+  }
+  .gallery .asset7 {
+    width: 376.45px;
+  }
+  .gallery .asset8 {
+    width: 435.46px;
   }
 }
